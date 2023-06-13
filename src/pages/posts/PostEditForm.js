@@ -29,6 +29,10 @@ function PostEditForm() {
   const history = useHistory();
   const { id } = useParams();
 
+  const myfunc = () => {
+    console.log('test')
+  }
+
   useEffect(() => {
     const handleMount = async () => {
       try {
@@ -40,7 +44,7 @@ function PostEditForm() {
         console.log(err);
       }
     };
-
+    myfunc();
     handleMount();
   }, [history, id]);
 
